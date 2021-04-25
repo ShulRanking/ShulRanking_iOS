@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuDialogViewController" customModule="ShulRankingDev" customModuleProvider="target">
+            <connections>
+                <outlet property="popupView" destination="n6E-P8-9X1" id="oEZ-Ih-08v"/>
+                <outlet property="tableView" destination="GQF-f7-3Gs" id="2wj-gt-erG"/>
+                <outlet property="tableViewHeightConstraint" destination="CCa-sz-i3Z" id="bxO-5p-M18"/>
+                <outlet property="titleLabel" destination="CkR-0w-0UC" id="a3P-Qs-E8h"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Zyh-YB-bZV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6E-P8-9X1">
+                    <rect key="frame" x="50" y="285.5" width="314" height="325"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mC8-1F-iUG">
+                            <rect key="frame" x="0.0" y="0.0" width="314" height="325"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkR-0w-0UC">
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="8nr-Cx-0rO"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" name="DarkGrayCustomColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="50" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GQF-f7-3Gs">
+                                    <rect key="frame" x="0.0" y="25" width="314" height="300"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="300" id="CCa-sz-i3Z"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="13S-Wv-nYG"/>
+                                        <outlet property="delegate" destination="-1" id="DCG-ds-zdo"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="GQF-f7-3Gs" firstAttribute="top" secondItem="CkR-0w-0UC" secondAttribute="bottom" id="5a6-Uu-G6V"/>
+                                <constraint firstAttribute="bottom" secondItem="GQF-f7-3Gs" secondAttribute="bottom" id="87w-07-0R9"/>
+                                <constraint firstAttribute="trailing" secondItem="CkR-0w-0UC" secondAttribute="trailing" id="9Rl-hC-lz6"/>
+                                <constraint firstItem="GQF-f7-3Gs" firstAttribute="leading" secondItem="mC8-1F-iUG" secondAttribute="leading" id="FFd-Q1-o9B"/>
+                                <constraint firstItem="CkR-0w-0UC" firstAttribute="top" secondItem="mC8-1F-iUG" secondAttribute="top" id="kwj-Fp-DLd"/>
+                                <constraint firstAttribute="trailing" secondItem="GQF-f7-3Gs" secondAttribute="trailing" id="rDf-ms-11H"/>
+                                <constraint firstItem="CkR-0w-0UC" firstAttribute="leading" secondItem="mC8-1F-iUG" secondAttribute="leading" id="w4j-Kf-h4m"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="ModalViewColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="mC8-1F-iUG" secondAttribute="bottom" id="N2T-cC-92K"/>
+                        <constraint firstAttribute="trailing" secondItem="mC8-1F-iUG" secondAttribute="trailing" id="Num-TD-u9M"/>
+                        <constraint firstItem="mC8-1F-iUG" firstAttribute="leading" secondItem="n6E-P8-9X1" secondAttribute="leading" id="ZM3-xe-1tF"/>
+                        <constraint firstItem="mC8-1F-iUG" firstAttribute="top" secondItem="n6E-P8-9X1" secondAttribute="top" id="zI5-7N-clQ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="ModalViewBackGroundColor"/>
+            <constraints>
+                <constraint firstItem="n6E-P8-9X1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="8n7-HK-ZFa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="n6E-P8-9X1" secondAttribute="trailing" constant="50" id="HE5-Ec-qlz"/>
+                <constraint firstItem="n6E-P8-9X1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="KeI-mG-gdP"/>
+                <constraint firstItem="n6E-P8-9X1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="j1G-jU-S4E"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="n6E-P8-9X1" secondAttribute="bottom" constant="75" id="wRR-we-S94"/>
+            </constraints>
+            <point key="canvasLocation" x="285.50724637681162" y="210.9375"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="DarkGrayCustomColor">
+            <color red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ModalViewBackGroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.15000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ModalViewColor">
+            <color red="1" green="1" blue="1" alpha="0.93000000715255737" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

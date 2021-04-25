@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="RankingItemTextTableViewCell" customModule="ShulRankingDev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OrP-30-6Nd">
+                        <rect key="frame" x="34.5" y="4" width="251" height="72"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eaz-D0-xxv">
+                                <rect key="frame" x="22" y="0.0" width="229" height="20"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="mnf-Fd-gn1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11.5"/>
+                                <color key="textColor" name="VeryDarkGrayCustomColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dOz-2f-8Ej">
+                                <rect key="frame" x="3" y="3" width="19" height="13"/>
+                                <color key="backgroundColor" name="RankingNumLabelBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="19" id="aNg-8Q-JkQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10.5"/>
+                                <color key="textColor" name="RankingNumLabelColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="bbbbbbbbbbb" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IcS-1y-KIc">
+                                <rect key="frame" x="0.0" y="20" width="251" height="52"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" name="VeryDarkGrayCustomColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9.6999998092651367"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemOrangeColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IcS-1y-KIc" secondAttribute="bottom" id="4eg-kC-72C"/>
+                            <constraint firstItem="dOz-2f-8Ej" firstAttribute="leading" secondItem="OrP-30-6Nd" secondAttribute="leading" constant="3" id="5BK-mo-goF"/>
+                            <constraint firstItem="IcS-1y-KIc" firstAttribute="leading" secondItem="OrP-30-6Nd" secondAttribute="leading" id="c4k-4W-JDq"/>
+                            <constraint firstItem="Eaz-D0-xxv" firstAttribute="top" secondItem="OrP-30-6Nd" secondAttribute="top" id="em1-YV-OFe"/>
+                            <constraint firstItem="IcS-1y-KIc" firstAttribute="top" secondItem="Eaz-D0-xxv" secondAttribute="bottom" id="f04-6j-wVv"/>
+                            <constraint firstItem="Eaz-D0-xxv" firstAttribute="leading" secondItem="dOz-2f-8Ej" secondAttribute="trailing" id="mIS-AL-FPg"/>
+                            <constraint firstAttribute="trailing" secondItem="Eaz-D0-xxv" secondAttribute="trailing" id="mhy-Db-qHO"/>
+                            <constraint firstAttribute="trailing" secondItem="IcS-1y-KIc" secondAttribute="trailing" id="qGf-cY-6Dx"/>
+                            <constraint firstItem="dOz-2f-8Ej" firstAttribute="top" secondItem="OrP-30-6Nd" secondAttribute="top" constant="3" id="yl8-Lg-zmY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OrP-30-6Nd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="3e0-8F-Fdg"/>
+                    <constraint firstItem="OrP-30-6Nd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="34.5" id="VUV-hq-Tpm"/>
+                    <constraint firstAttribute="trailing" secondItem="OrP-30-6Nd" secondAttribute="trailing" constant="34.5" id="brT-cp-vw3"/>
+                    <constraint firstAttribute="bottom" secondItem="OrP-30-6Nd" secondAttribute="bottom" constant="4" id="qac-ay-Y4B"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="cellTitleLabel" destination="Eaz-D0-xxv" id="klD-Ur-ykT"/>
+                <outlet property="descriptionTextView" destination="IcS-1y-KIc" id="uFs-Lh-NuA"/>
+                <outlet property="parentView" destination="OrP-30-6Nd" id="9a1-Lm-Sd7"/>
+                <outlet property="rankingNumLabel" destination="dOz-2f-8Ej" id="uv1-uT-vUU"/>
+            </connections>
+            <point key="canvasLocation" x="124.6376811594203" y="64.955357142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="RankingNumLabelBackgroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RankingNumLabelColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="VeryDarkGrayCustomColor">
+            <color red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

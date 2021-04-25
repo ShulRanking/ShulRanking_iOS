@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationDetailsViewController" customModule="RankingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="VvA-mV-5Hy" id="HSZ-8i-neF"/>
+                <outlet property="view" destination="lSU-fG-SgC" id="b17-Se-NuS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view tag="-1" contentMode="scaleToFill" id="lSU-fG-SgC">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VvA-mV-5Hy">
+                    <rect key="frame" x="15" y="304" width="384" height="288"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.48627450979999998" blue="0.0" alpha="0.15462114730000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="VvA-mV-5Hy" secondAttribute="height" multiplier="4:3" id="4jm-J6-ud3"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="R8X-lm-bg1"/>
+            <color key="backgroundColor" name="ModalViewBackGroundColor"/>
+            <constraints>
+                <constraint firstItem="VvA-mV-5Hy" firstAttribute="leading" secondItem="R8X-lm-bg1" secondAttribute="leading" constant="15" id="2Vf-GF-is8"/>
+                <constraint firstItem="R8X-lm-bg1" firstAttribute="trailing" secondItem="VvA-mV-5Hy" secondAttribute="trailing" constant="15" id="COK-AR-Etm"/>
+                <constraint firstItem="VvA-mV-5Hy" firstAttribute="centerY" secondItem="lSU-fG-SgC" secondAttribute="centerY" id="HhR-Pu-N8W"/>
+            </constraints>
+            <point key="canvasLocation" x="58" y="64"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ModalViewBackGroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.15000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

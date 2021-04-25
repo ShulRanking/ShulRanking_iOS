@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeDetailsViewController" customModule="RankingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="mainImageView" destination="c1Z-Gc-n7e" id="Wa7-h0-5BL"/>
+                <outlet property="view" destination="ihp-js-hed" id="zRt-mZ-beL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view tag="-1" contentMode="scaleToFill" id="ihp-js-hed">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1Z-Gc-n7e">
+                    <rect key="frame" x="35" y="276" width="344" height="344"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.48627450979999998" blue="0.0" alpha="0.15462114730000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="c1Z-Gc-n7e" secondAttribute="height" multiplier="1:1" id="fml-ID-gDc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="XG6-aN-Ya8"/>
+            <color key="backgroundColor" name="ModalViewBackGroundColor"/>
+            <constraints>
+                <constraint firstItem="XG6-aN-Ya8" firstAttribute="trailing" secondItem="c1Z-Gc-n7e" secondAttribute="trailing" constant="35" id="gLK-Up-Qh8"/>
+                <constraint firstItem="c1Z-Gc-n7e" firstAttribute="centerY" secondItem="ihp-js-hed" secondAttribute="centerY" id="p7X-mS-uED"/>
+                <constraint firstItem="c1Z-Gc-n7e" firstAttribute="leading" secondItem="XG6-aN-Ya8" secondAttribute="leading" constant="35" id="xQ0-cr-3rL"/>
+            </constraints>
+            <point key="canvasLocation" x="58" y="64"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ModalViewBackGroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.15000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

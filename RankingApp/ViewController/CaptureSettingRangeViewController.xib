@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CaptureSettingRangeViewController" customModule="ShulRankingDev" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomPickerView" destination="9m7-kb-TEW" id="jyO-FV-UOz"/>
+                <outlet property="popupView" destination="Bwx-cv-61H" id="0FD-7M-eJH"/>
+                <outlet property="topPickerView" destination="nta-Q2-K8O" id="vGz-Dx-coh"/>
+                <outlet property="view" destination="QDN-8T-QAI" id="opP-Yd-3fS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view tag="-1" contentMode="scaleToFill" id="QDN-8T-QAI">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwx-cv-61H">
+                    <rect key="frame" x="57" y="298" width="300" height="300"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここから→" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ey3-Kg-pXa">
+                            <rect key="frame" x="8" y="80" width="70" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="GjH-h9-3h0"/>
+                                <constraint firstAttribute="width" constant="70" id="eR7-2j-fb8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" name="DarkGrayCustomColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nta-Q2-K8O">
+                            <rect key="frame" x="86" y="35" width="204" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="110" id="i9e-UV-bLj"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="emc-2V-Gx9"/>
+                                <outlet property="delegate" destination="-1" id="m7f-k9-tum"/>
+                            </connections>
+                        </pickerView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここまで→" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aP-Wl-E7l">
+                            <rect key="frame" x="8" y="200" width="70" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="cM5-Tz-M9A"/>
+                                <constraint firstAttribute="height" constant="20" id="j2D-LN-TmV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" name="DarkGrayCustomColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <pickerView tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9m7-kb-TEW">
+                            <rect key="frame" x="86" y="155" width="204" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="110" id="tXM-vi-T7C"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="u5i-iG-AD7"/>
+                                <outlet property="delegate" destination="-1" id="GFA-2U-ahB"/>
+                            </connections>
+                        </pickerView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCY-kZ-QzO">
+                            <rect key="frame" x="50" y="264" width="60" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="i7Z-HA-KId"/>
+                                <constraint firstAttribute="height" constant="30" id="vCa-5k-KgI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="クリア">
+                                <color key="titleColor" name="DarkGrayCustomColor"/>
+                            </state>
+                            <connections>
+                                <action selector="clearButtonTapped:" destination="-1" eventType="touchUpInside" id="VCZ-d8-bQW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXw-yS-GYb">
+                            <rect key="frame" x="190" y="264" width="60" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="gyx-w4-7rV"/>
+                                <constraint firstAttribute="height" constant="30" id="ukM-bq-dVX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="決定">
+                                <color key="titleColor" name="DarkGrayCustomColor"/>
+                            </state>
+                            <connections>
+                                <action selector="decisionButtonTapped:" destination="-1" eventType="touchUpInside" id="j1O-tC-zef"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="スクリーンショット範囲指定" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT3-ml-lld">
+                            <rect key="frame" x="25" y="10" width="250" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="eYu-Hw-i8d"/>
+                                <constraint firstAttribute="width" constant="250" id="w0t-SX-Bbk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" name="DarkGrayCustomColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="ModalViewColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="aCY-kZ-QzO" secondAttribute="bottom" constant="6" id="A2Z-np-Sff"/>
+                        <constraint firstItem="nta-Q2-K8O" firstAttribute="leading" secondItem="ey3-Kg-pXa" secondAttribute="trailing" constant="8" id="B86-aJ-nzf"/>
+                        <constraint firstAttribute="bottom" secondItem="7aP-Wl-E7l" secondAttribute="bottom" constant="80" id="F5C-Sb-3qu"/>
+                        <constraint firstAttribute="trailing" secondItem="nta-Q2-K8O" secondAttribute="trailing" constant="10" id="Hje-po-NLg"/>
+                        <constraint firstAttribute="bottom" secondItem="9m7-kb-TEW" secondAttribute="bottom" constant="35" id="KH2-lB-Nhn"/>
+                        <constraint firstItem="GT3-ml-lld" firstAttribute="centerX" secondItem="Bwx-cv-61H" secondAttribute="centerX" id="LfH-dn-CtH"/>
+                        <constraint firstAttribute="width" constant="300" id="SE2-RV-V3a"/>
+                        <constraint firstItem="GT3-ml-lld" firstAttribute="top" secondItem="Bwx-cv-61H" secondAttribute="top" constant="10" id="SbF-sr-F2G"/>
+                        <constraint firstItem="nta-Q2-K8O" firstAttribute="top" secondItem="Bwx-cv-61H" secondAttribute="top" constant="35" id="VAH-ld-C3C"/>
+                        <constraint firstItem="aCY-kZ-QzO" firstAttribute="leading" secondItem="Bwx-cv-61H" secondAttribute="leading" constant="50" id="VPE-it-U8c"/>
+                        <constraint firstAttribute="bottom" secondItem="KXw-yS-GYb" secondAttribute="bottom" constant="6" id="VVn-o7-LeG"/>
+                        <constraint firstItem="ey3-Kg-pXa" firstAttribute="leading" secondItem="Bwx-cv-61H" secondAttribute="leading" constant="8" id="Vgz-q2-leh"/>
+                        <constraint firstItem="9m7-kb-TEW" firstAttribute="leading" secondItem="7aP-Wl-E7l" secondAttribute="trailing" constant="8" id="ar1-oK-4GA"/>
+                        <constraint firstItem="ey3-Kg-pXa" firstAttribute="top" secondItem="Bwx-cv-61H" secondAttribute="top" constant="80" id="bAd-fs-QvD"/>
+                        <constraint firstItem="7aP-Wl-E7l" firstAttribute="leading" secondItem="Bwx-cv-61H" secondAttribute="leading" constant="8" id="jeh-Ph-fYG"/>
+                        <constraint firstAttribute="trailing" secondItem="9m7-kb-TEW" secondAttribute="trailing" constant="10" id="rca-UP-5AU"/>
+                        <constraint firstAttribute="height" constant="300" id="sjK-Qh-v2U"/>
+                        <constraint firstAttribute="trailing" secondItem="KXw-yS-GYb" secondAttribute="trailing" constant="50" id="vj4-gy-PRw"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="DKK-UI-wZV"/>
+            <color key="backgroundColor" name="ModalViewBackGroundColor"/>
+            <constraints>
+                <constraint firstItem="Bwx-cv-61H" firstAttribute="centerY" secondItem="QDN-8T-QAI" secondAttribute="centerY" id="QPa-Hv-aKE"/>
+                <constraint firstItem="Bwx-cv-61H" firstAttribute="centerX" secondItem="QDN-8T-QAI" secondAttribute="centerX" id="har-Pl-1M2"/>
+            </constraints>
+            <point key="canvasLocation" x="836" y="108"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="DarkGrayCustomColor">
+            <color red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ModalViewBackGroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.15000000596046448" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ModalViewColor">
+            <color red="1" green="1" blue="1" alpha="0.93000000715255737" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

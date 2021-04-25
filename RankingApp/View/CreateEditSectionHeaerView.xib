@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5nl-UD-jo9" customClass="CreateEditSectionHeaerView" customModule="ShulRankingDev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ee-ra-prm">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojt-BP-BK5">
+                            <rect key="frame" x="207.5" y="2.5" width="106.5" height="80"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="974-SK-9aY">
+                                    <rect key="frame" x="0.0" y="0.0" width="106.5" height="80"/>
+                                    <color key="backgroundColor" name="CreateEditHeaderCellImageColor"/>
+                                </imageView>
+                                <imageView hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="Jsw-GZ-zY9">
+                                    <rect key="frame" x="41.5" y="28.5" width="23" height="23"/>
+                                    <color key="tintColor" name="EmptyPictureColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Jsw-GZ-zY9" secondAttribute="height" multiplier="1:1" id="YNg-gF-w8L"/>
+                                        <constraint firstAttribute="width" constant="23" id="h9X-CQ-beO"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ojt-BP-BK5" secondAttribute="height" multiplier="1:1" id="7lA-LT-g8l"/>
+                                <constraint firstAttribute="bottom" secondItem="974-SK-9aY" secondAttribute="bottom" id="MGZ-cf-DPP"/>
+                                <constraint firstAttribute="width" secondItem="ojt-BP-BK5" secondAttribute="height" multiplier="4:3" id="O97-gD-lvz"/>
+                                <constraint firstItem="974-SK-9aY" firstAttribute="top" secondItem="ojt-BP-BK5" secondAttribute="top" id="YcV-r2-lze"/>
+                                <constraint firstItem="974-SK-9aY" firstAttribute="leading" secondItem="ojt-BP-BK5" secondAttribute="leading" id="b7e-Be-p0i"/>
+                                <constraint firstItem="Jsw-GZ-zY9" firstAttribute="centerY" secondItem="ojt-BP-BK5" secondAttribute="centerY" id="i5x-D9-O7S"/>
+                                <constraint firstItem="Jsw-GZ-zY9" firstAttribute="centerX" secondItem="ojt-BP-BK5" secondAttribute="centerX" id="lTT-eP-vPw"/>
+                                <constraint firstAttribute="trailing" secondItem="974-SK-9aY" secondAttribute="trailing" id="wIW-P6-7nH"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="7lA-LT-g8l"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ランキングのタイトルを入力" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ElR-vb-kyM">
+                            <rect key="frame" x="8" y="29" width="193.5" height="27"/>
+                            <color key="tintColor" name="OrangeOfficialCustomColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="27" id="bgY-zX-qwn"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            <connections>
+                                <outlet property="delegate" destination="5nl-UD-jo9" id="yYu-kp-aE0"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ElR-vb-kyM" firstAttribute="leading" secondItem="6ee-ra-prm" secondAttribute="leadingMargin" id="1ml-7F-gz2"/>
+                        <constraint firstItem="ojt-BP-BK5" firstAttribute="top" secondItem="6ee-ra-prm" secondAttribute="top" constant="2.5" id="21K-Yw-ehk"/>
+                        <constraint firstItem="ElR-vb-kyM" firstAttribute="centerY" secondItem="6ee-ra-prm" secondAttribute="centerY" id="amz-jd-L2Z"/>
+                        <constraint firstAttribute="bottom" secondItem="ojt-BP-BK5" secondAttribute="bottom" constant="2.5" id="nJn-rv-3kB"/>
+                        <constraint firstItem="ojt-BP-BK5" firstAttribute="leading" secondItem="ElR-vb-kyM" secondAttribute="trailing" constant="6" id="q3y-G7-LVy"/>
+                        <constraint firstAttribute="trailing" secondItem="ojt-BP-BK5" secondAttribute="trailing" constant="6" id="uwI-TX-Hbw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Aqm-Wz-0Fx"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6ee-ra-prm" firstAttribute="leading" secondItem="5nl-UD-jo9" secondAttribute="leading" id="aTn-IO-l4G"/>
+                <constraint firstAttribute="trailing" secondItem="6ee-ra-prm" secondAttribute="trailing" id="bEe-dH-JVW"/>
+                <constraint firstItem="6ee-ra-prm" firstAttribute="top" secondItem="5nl-UD-jo9" secondAttribute="top" id="fFw-Qq-LgF"/>
+                <constraint firstAttribute="bottom" secondItem="6ee-ra-prm" secondAttribute="bottom" id="vZM-YL-tC9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="emptyImageView" destination="Jsw-GZ-zY9" id="1Kj-9y-AvO"/>
+                <outlet property="imageRatio11Constraint" destination="7lA-LT-g8l" id="Fqj-Mo-4Zu"/>
+                <outlet property="imageRatio43Constraint" destination="O97-gD-lvz" id="4Lm-1b-DHd"/>
+                <outlet property="mainImageView" destination="974-SK-9aY" id="qi6-ko-HUl"/>
+                <outlet property="titleTextField" destination="ElR-vb-kyM" id="coD-Ct-bFy"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="63.28125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="picture" width="20" height="20"/>
+        <namedColor name="CreateEditHeaderCellImageColor">
+            <color red="0.46299999952316284" green="0.46299999952316284" blue="0.50199997425079346" alpha="0.11999999731779099" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="EmptyPictureColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OrangeOfficialCustomColor">
+            <color red="0.96470588235294119" green="0.41568627450980394" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

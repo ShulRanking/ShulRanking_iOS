@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GCProgressViewController" customModule="RankingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="adBannerView" destination="Asz-S8-pm3" id="gVR-n7-427"/>
+                <outlet property="progressSpaceView" destination="YQf-Mk-jmv" id="wje-gb-ATR"/>
+                <outlet property="titleLabel" destination="WEQ-LJ-or3" id="oRd-xe-rjp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Nw-c6-gHu">
+                    <rect key="frame" x="82" y="308.5" width="250" height="279.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Asz-S8-pm3" customClass="GADBannerView">
+                            <rect key="frame" x="0.0" y="229.5" width="250" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="061-tB-A7H"/>
+                                <constraint firstAttribute="width" constant="250" id="Vlc-1d-383"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="adUnitID" value="ca-app-pub-9833919290898191/8909651845"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="autoloadEnabled" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="pmU-Mj-Jbn"/>
+                            </connections>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcA-6f-in0">
+                            <rect key="frame" x="87.5" y="174.5" width="75" height="25"/>
+                            <color key="backgroundColor" name="OrangeOfficialCustomColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="SZ4-K5-aXT"/>
+                                <constraint firstAttribute="width" constant="75" id="xBH-7W-404"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                            <state key="normal" title="キャンセル">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancelTapped:" destination="-1" eventType="touchUpInside" id="3Sa-yb-9gA"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQf-Mk-jmv">
+                            <rect key="frame" x="70" y="49.5" width="110" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="110" id="8V1-NL-T5I"/>
+                                <constraint firstAttribute="width" constant="110" id="UiM-yG-PDc"/>
+                            </constraints>
+                        </view>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEQ-LJ-or3">
+                            <rect key="frame" x="105.5" y="15" width="39.5" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" name="DarkGrayCustomColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="ModalViewColor"/>
+                    <constraints>
+                        <constraint firstItem="YcA-6f-in0" firstAttribute="centerX" secondItem="8Nw-c6-gHu" secondAttribute="centerX" id="F4W-H9-HQS"/>
+                        <constraint firstItem="Asz-S8-pm3" firstAttribute="top" secondItem="YcA-6f-in0" secondAttribute="bottom" constant="30" id="FjK-p9-GyX"/>
+                        <constraint firstItem="Asz-S8-pm3" firstAttribute="leading" secondItem="8Nw-c6-gHu" secondAttribute="leading" id="VuT-RU-D1R"/>
+                        <constraint firstAttribute="bottom" secondItem="Asz-S8-pm3" secondAttribute="bottom" id="Wss-bO-ggn"/>
+                        <constraint firstItem="WEQ-LJ-or3" firstAttribute="centerX" secondItem="8Nw-c6-gHu" secondAttribute="centerX" id="ZAa-Nk-Aka"/>
+                        <constraint firstAttribute="trailing" secondItem="Asz-S8-pm3" secondAttribute="trailing" id="g6x-Rb-gDD"/>
+                        <constraint firstItem="YcA-6f-in0" firstAttribute="top" secondItem="YQf-Mk-jmv" secondAttribute="bottom" constant="15" id="hdd-Io-XHa"/>
+                        <constraint firstItem="WEQ-LJ-or3" firstAttribute="top" secondItem="8Nw-c6-gHu" secondAttribute="top" constant="15" id="lfn-ba-ZBs"/>
+                        <constraint firstItem="YQf-Mk-jmv" firstAttribute="top" secondItem="WEQ-LJ-or3" secondAttribute="bottom" constant="15" id="n2e-H7-fbb"/>
+                        <constraint firstItem="YQf-Mk-jmv" firstAttribute="centerX" secondItem="8Nw-c6-gHu" secondAttribute="centerX" id="vfO-6k-Yhq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="8Nw-c6-gHu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fT1-GR-1ch"/>
+                <constraint firstItem="8Nw-c6-gHu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jcm-QK-vOx"/>
+            </constraints>
+            <point key="canvasLocation" x="100.00000000000001" y="64.955357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="DarkGrayCustomColor">
+            <color red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ModalViewColor">
+            <color red="1" green="1" blue="1" alpha="0.93000000715255737" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OrangeOfficialCustomColor">
+            <color red="0.96470588235294119" green="0.41568627450980394" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

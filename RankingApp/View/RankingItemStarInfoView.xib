@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RankingItemStarInfoView" customModule="ShulRankingDev" customModuleProvider="target">
+            <connections>
+                <outlet property="radarChartView" destination="VGF-BP-JEw" id="qaq-Gz-K9W"/>
+                <outlet property="starSum" destination="qqA-Ax-tgg" id="v9v-ff-Q57"/>
+                <outlet property="starsAreaView" destination="o9G-eG-txq" id="3nF-d1-EEe"/>
+                <outlet property="titlesAreaView" destination="H0v-ro-vOt" id="FFH-iT-h6O"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9G-eG-txq">
+                    <rect key="frame" x="97.5" y="0.0" width="235.5" height="81"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0v-ro-vOt">
+                    <rect key="frame" x="0.0" y="0.0" width="97.5" height="81"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97.5" id="C92-sU-R91"/>
+                    </constraints>
+                </view>
+                <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGF-BP-JEw" customClass="AMRadarChartView" customModule="AMChart">
+                    <rect key="frame" x="333" y="0.0" width="81" height="81"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqA-Ax-tgg" userLabel="starSum">
+                            <rect key="frame" x="3" y="0.0" width="22" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="VGF-BP-JEw" secondAttribute="height" multiplier="1:1" id="bq2-fA-DQ9"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.10000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" systemColor="systemOrangeColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="axisWidth">
+                            <real key="value" value="0.29999999999999999"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="axisColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="VGF-BP-JEw" secondAttribute="bottom" id="BTg-6d-zdp"/>
+                <constraint firstItem="H0v-ro-vOt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JGn-gY-Fzi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VGF-BP-JEw" secondAttribute="trailing" id="JL9-qj-753"/>
+                <constraint firstItem="VGF-BP-JEw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QWH-bn-9Bw"/>
+                <constraint firstItem="o9G-eG-txq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="U0S-MT-jg0"/>
+                <constraint firstItem="H0v-ro-vOt" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gRA-0C-Uqv"/>
+                <constraint firstItem="H0v-ro-vOt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mo7-TZ-ZSI"/>
+                <constraint firstItem="o9G-eG-txq" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="uDv-xC-FJb"/>
+                <constraint firstItem="o9G-eG-txq" firstAttribute="leading" secondItem="H0v-ro-vOt" secondAttribute="trailing" id="wEz-Xc-iPi"/>
+                <constraint firstItem="VGF-BP-JEw" firstAttribute="leading" secondItem="o9G-eG-txq" secondAttribute="trailing" id="z9q-og-5df"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="111.59420289855073" y="61.941964285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="ShulRankingDev" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="101.5"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="101.5"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yKO-S1-xoa">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="yKO-S1-xoa" secondAttribute="height" multiplier="1:1" id="Bim-dp-OpW"/>
+                        </constraints>
+                    </imageView>
+                    <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好きな~~~ランキング" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlp-Sm-lht">
+                        <rect key="frame" x="0.0" y="70" width="100" height="30"/>
+                        <color key="backgroundColor" name="DarkBackGround30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="CS7-en-qwM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" name="WhiteCustomColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xlp-Sm-lht" secondAttribute="trailing" id="3rx-k6-6I2"/>
+                <constraint firstItem="yKO-S1-xoa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7pB-im-xS1"/>
+                <constraint firstAttribute="bottom" secondItem="xlp-Sm-lht" secondAttribute="bottom" constant="1.5" id="8gP-qw-cCc"/>
+                <constraint firstItem="yKO-S1-xoa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Lrb-t1-nNc"/>
+                <constraint firstItem="xlp-Sm-lht" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UH0-QS-D8q"/>
+                <constraint firstAttribute="trailing" secondItem="yKO-S1-xoa" secondAttribute="trailing" id="bcP-Eb-evH"/>
+                <constraint firstAttribute="bottom" secondItem="yKO-S1-xoa" secondAttribute="bottom" constant="1.5" id="uwL-ms-yPG"/>
+            </constraints>
+            <size key="customSize" width="100" height="117"/>
+            <connections>
+                <outlet property="mainImageVIew" destination="yKO-S1-xoa" id="GJF-0H-UfB"/>
+                <outlet property="titleLabel" destination="xlp-Sm-lht" id="Gpx-WO-c6S"/>
+            </connections>
+            <point key="canvasLocation" x="27.536231884057973" y="53.571428571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="DarkBackGround30">
+            <color red="0.23137254901960785" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WhiteCustomColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
